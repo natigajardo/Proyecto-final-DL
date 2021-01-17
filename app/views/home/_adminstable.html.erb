@@ -1,0 +1,27 @@
+<div class="pt-3 table-responsive">
+
+  <table class="table margin-table-admin table-striped table-bordered">
+
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Fecha creación</th>
+        <th scope="col" colspan="3">Options</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.created_at %></td>
+            <td><%= link_to 'Edit', edit_user_path(user) %></td>
+            <td><%= link_to 'Destroy', cancel_user_registration_path(user), method: :get, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+    </tbody> 
+  </table>
+
+</div>

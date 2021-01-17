@@ -1,0 +1,48 @@
+<%= link_to 'Crea nuevo producto', new_product_path, class: "btn btn-info mt-4"%>
+
+<div class="pt-3 table-responsive">
+
+  <table class="table margin-table-admin table-striped table-bordered">
+    
+    <thead>
+      <tr>
+        <th scope="col">Imagenes</th>
+        <th scope="col">Sku</th>
+        <th scope="col">Name</th>
+        <th scope="col">Author</th>
+        <th scope="col">Description</th>
+        <th scope="col">Size</th>
+        <th scope="col">Price</th>
+        <th scope="col">Category</th>
+        <th scope="col" colspan="3">Options</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><% if product.images.attached? %>
+                <% product.images.each do |p| %>
+                  <%= image_tag p.variant(resize: "50x50").processed, class: "pt-1" %>
+                  <%#= link_to 'Remove', delete_image_attachment_product_url(image_url), method: :delete, data: {confirm: 'Estas seguro?'} %>
+                <% end %>
+          <% end %>  
+          </td>
+          <td><%= product.sku %></td>
+          <td><%= product.name %></td>
+          <td><%= product.author %></td>
+          <td><%= product.description %></td>
+          <td><%= product.size %></td>
+          <td>$<%= product.price %></td>
+          <td><% product.categories.each do |c| %>
+                  - <%= c.name %><br>
+              <%end%>    
+          </td>
+          <td><%= link_to 'Show', product %></td>
+          <td><%= link_to 'Edit', edit_product_path(product) %></td>
+          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

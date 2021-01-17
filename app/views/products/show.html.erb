@@ -1,0 +1,73 @@
+<div class="pt-4 margenes-show">
+
+  <div class="container">
+    <div class="row">
+
+      <!-- Vista cuadros en carrusel -->
+      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="carrusel-product-show">
+
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <% @product.images.each_with_index do |image, index| %>
+              <div class="carousel-item item <%= index == 0 ? 'active' : '' %>">  
+                  <%= image_tag image.variant(resize: "800x800").processed, class: "d-block w-100" %>      
+              </div>
+              <% end %>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a> 
+          </div>
+    
+        </div>  
+      </div>
+
+      <!-- Vista datos del cuadro -->
+      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="ficha-product-datos">
+          <div class="pb-2">
+            <p class="title-show"><%= @product.name %></p>
+          </div>
+
+          <div class="pb-3">
+            <strong class="author-show">Autor: <%= @product.author %> </strong>
+          </div>
+
+          <div class="pb-3">
+            <strong class="description-title-show">Descripción:</strong>
+            <p class="description-show"><%= @product.description %></p>
+          </div>
+      
+          <div class="pb-3">
+            <strong class="size-title-show">Tamaño de la pintura:</strong>
+            <p class="size-show"><%= @product.size %></p>
+          </div>
+
+          <div class="pb-3">
+            <strong class="price-title-show">Precio:</strong>
+            <p class="price-show">$<%= @product.price %></p>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <%= link_to "Agregar al carrito", root_path, class: "btn btn-info d-inline"%>
+            </div>
+            <div class="col-6">
+              <%= link_to 'Back', products_path, class: "btn btn-dark back-bottom d-inline" %>
+            </div>
+          </div>
+
+        </div>
+      </div>  
+
+    </div>
+  </div>
+
+</div>
+<%= link_to 'Back', products_path %>

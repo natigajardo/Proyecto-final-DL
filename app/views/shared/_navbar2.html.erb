@@ -1,0 +1,67 @@
+<!-- Nav -->
+  <nav class="navbar navbar-expand-lg navbar-light nav-home">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Nosotros <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+        <%= link_to 'Productos', root_path, class: "nav-link" %> 
+        <li class="nav-item">
+        <a class="nav-link" href="#">Ofertas</a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <ul class="navbar-nav justify-content-center">
+        <%= link_to 'Iconic house', root_path, class: "navbar-brand title-center" %> 
+      </ul>
+    </div>
+
+    <div>
+      <ul class="nav justify-content-end dropdown-right-align">
+        <% if user_signed_in? %>
+            <li class="nav-item dropdown container">
+              <a class="nav-link dropdown-toggle text-white" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user text-dark"></i> 
+                Mi menú 
+              </a>
+
+              <% if current_user.role == 'user' %>
+                <div class="dropdown-menu dropdown-default" 
+                aria-labelledby="navbarDropdownMenuLink-333">
+                  <%= link_to('Editar mis datos', edit_user_registration_path(@user), class: "dropdown-item" ) %>
+                  <%= link_to('Mis compras', home_orders_user_path, method: :get, class: "dropdown-item")%>
+                  <a class="dropdown-item" href="#">Mis favoritos</a>
+                  <div class="dropdown-divider"></div>
+                  <%= link_to('Log out', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
+                </div>
+              <% elsif current_user.role == 'admin' %>  
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <%= link_to('Editar mis datos', edit_user_registration_path(@user), class: "dropdown-item" ) %>
+                  <%= link_to('Admin', root_path, method: :get, class: "dropdown-item") %>
+                  <div class="dropdown-divider"></div>
+                  <%= link_to('Log out', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
+                </div>
+              <% end %>  
+            </li>
+
+        <% else %>
+
+            <li class="nav-item">
+              <%= link_to('Sign in', new_user_session_path, class: "nav-link text-dark sign-in-bottom") %>  
+            </li>
+            <li class="nav-item">
+              <%= link_to('Registrate', new_user_registration_path, class: "nav-link text-dark sing-up-bottom") %> 
+            </li>
+
+        <% end %>
+      </ul>
+    </div>
+  </nav>

@@ -1,0 +1,64 @@
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :sku %>
+    <%= form.text_field :sku %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dimension %>
+    <%= form.text_field :dimension %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="field w-50 py-4">
+    <%= form.label :images %>
+      <%= form.file_field :images, multiple: true %> 
+    </div>
+
+    <div class="field pt-1">
+      <%= form.label :categories %>
+        <%= form.collection_check_boxes(:category_ids, 
+                                        Category.all,
+                                        :id,
+                                        :name) do |b| %><br>
+          <%= b.label class:"label-checkbox" do %>
+          <%= b.check_box + b.text %>
+        <%end %>
+      <%end%>                               
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
