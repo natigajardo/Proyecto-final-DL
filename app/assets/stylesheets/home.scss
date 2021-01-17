@@ -12,13 +12,19 @@ body * {
   padding: 0;
 }
 
+.bg-crema{
+  background-color: white;
+}
+
 .navbar-brand{
-    font-family: 'Lobster', cursive;
-    font-weight: 400;
-    font-size: 1.5rem;
+    height: 60px;
 }
 
 .home-decor{
   height: 420px;
   margin-bottom: 4.5rem;
+}
+
+.bg-about{
+  background-color: white;
 }
