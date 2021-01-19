@@ -1,3 +1,240 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Card de productos generales 
+.color-bg-products{
+  background-color: white;
+}
+
+.medidas-cards-productos{
+  width: 302px;
+  height: 460px;
+  border-color: grey;
+}
+
+.color-card-footer{
+  background-color: #D9DADB;
+  padding-top: 1rem;
+}
+
+.price-text-card{
+  font-size: 1rem;
+}
+
+.card-image-medidas{
+  padding-top: 0.5rem;
+  width: 285px;
+  height: auto;
+}
+
+//-----------------------------------------------------------
+@media (min-width: 576px) { 
+   // Card de productos generales 
+   .color-bg-products{
+    background-color: white;
+  }
+
+  .medidas-cards-productos{
+    width: 302px;
+    height: 460px;
+    border-color: grey;
+  }
+
+  .color-card-footer{
+    background-color: #D9DADB;
+    padding-top: 1rem;
+  }
+
+  .price-text-card{
+    font-size: 1rem;
+  }
+
+  .card-image-medidas{
+    padding-top: 0.5rem;
+    width: 285px;
+    height: auto;
+  }
+}
+
+//-----------------------------------------------------------
+@media (min-width: 768px) {
+  // Card de productos generales 
+  .color-bg-products{
+    background-color: white;
+  }
+
+  .medidas-cards-productos{
+    width: 302px;
+    height: 460px;
+    border-color: grey;
+  }
+
+  .color-card-footer{
+    background-color: #D9DADB;
+    padding-top: 1rem;
+  }
+
+  .price-text-card{
+    font-size: 1rem;
+  }
+
+  .card-image-medidas{
+    padding-top: 0.5rem;
+    width: 285px;
+    height: auto;
+  }
+
+ }
+
+ //-----------------------------------------------------------
+@media (min-width: 992px) {
+
+     // Card de productos generales 
+    .card-image-medidas{
+        padding-top: 0.5rem;
+        width: 280px;
+        height: auto;
+      }
+ 
+    .color-bg-products{
+        background-color: white;
+    }
+
+    .medidas-cards-productos{
+        width: 302px;
+        height: 460px;
+        border-color: grey;
+    }
+
+    .color-card-footer{
+        background-color: #D9DADB;
+        padding-top: 1rem;
+    }
+
+    .price-text-card{
+        font-size: 1rem;
+    }
+
+    // SHOW  
+    .back-bottom{
+        margin-left: -5rem;
+    }
+
+    .carrusel-product-show{
+        width: 100%;
+        height: auto;
+    }
+
+    .ficha-product-datos{
+        margin-top: 1rem;
+    }
+
+    .margenes-show{
+        margin: 2rem 0rem;
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        filter: invert(1);
+    }
+
+    .title-show{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    .author-show{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+    .description-title-show, .size-title-show, .price-title-show{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 1.2rem;
+    }
+
+    .description-show, .size-show, .price-show{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+}
+
+//-----------------------------------------------------------
+@media (min-width: 1200px) { 
+
+  // Card de productos generales 
+  .color-bg-products{
+    background-color: white;
+  }
+
+  .medidas-cards-productos{
+    width: 302px;
+    height: 460px;
+    border-color: grey;
+  }
+
+  .color-card-footer{
+    background-color: #D9DADB;
+    padding-top: 1rem;
+  }
+
+  .price-text-card{
+    font-size: 1rem;
+  }
+
+  .card-image-medidas{
+    padding-top: 0.5rem;
+    width: 280px;
+    height: auto;
+  }
+
+  // SHOW  
+  .back-bottom{
+    margin-left: -8rem;
+  }
+
+  .carrusel-product-show{
+    width: 100%;
+    height: auto;
+  }
+
+  .ficha-product-datos{
+    margin-top: 4rem;
+  }
+
+  .margenes-show{
+    margin: 2rem 0rem;
+  }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon{
+    filter: invert(1);
+  }
+
+  .title-show{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  .author-show{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+
+  .description-title-show, .size-title-show, .price-title-show{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+  }
+
+  .description-show, .size-show, .price-show{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+
+ }

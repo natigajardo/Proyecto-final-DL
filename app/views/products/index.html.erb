@@ -15,7 +15,7 @@
       <div class="row" id="products-index">
   
         <% @products.each do |p| %>
-        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 mt-4 mx-4" >
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mt-4 mx-4" >
           <!-- Card -->
           <div class="card medidas-cards-productos">
   
@@ -38,7 +38,7 @@
             <div class="border-bottom"></div>
   
                 <!-- Card footer -->
-            <div class="rounded-bottom color-card-footer lighten-3 text-center pb-3">
+            <div class="rounded-bottom color-card-footer lighten-3 py-3">
               <ul class="list-unstyled list-inline font-small">
                 <li class="list-inline-item pr-2 white-text"> <%= link_to 'Ver más', p, class: "btn btn-dark" %></li>
                 <li class="list-inline-item pr-2 white-text">

@@ -7,4 +7,9 @@ class HomeController < ApplicationController
     @users = User.where(role: 'admin')
     @users1 = User.where(role: 'user')
   end
+
+  def paneluser
+
+  end 
+
 end

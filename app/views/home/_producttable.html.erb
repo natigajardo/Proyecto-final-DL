@@ -1,10 +1,13 @@
-<%= link_to 'Crea nuevo producto', new_product_path, class: "btn btn-info mt-4"%>
+<div class="mt-4 mb-3">
+<%= link_to 'Crea nuevo producto', new_product_path, class: "btn btn-info d-inline"%>
+<%= link_to 'Nueva categoría', new_category_path, class: "btn btn-secondary ml-2 d-inline" %>
+</div>
 
 <div class="pt-3 table-responsive">
 
   <table class="table margin-table-admin table-striped table-bordered">
     
-    <thead>
+    <thead class="title-table-products">655
       <tr>
         <th scope="col">Imagenes</th>
         <th scope="col">Sku</th>
@@ -18,12 +21,12 @@
       </tr>
     </thead>
 
-    <tbody>
+    <tbody class="text-table-products">
       <% @products.each do |product| %>
         <tr>
           <td><% if product.images.attached? %>
                 <% product.images.each do |p| %>
-                  <%= image_tag p.variant(resize: "50x50").processed, class: "pt-1" %>
+                  <%= image_tag p.variant(resize: "50x50").processed, class: "pt-1 d-inline" %>
                   <%#= link_to 'Remove', delete_image_attachment_product_url(image_url), method: :delete, data: {confirm: 'Estas seguro?'} %>
                 <% end %>
           <% end %>  
@@ -31,8 +34,8 @@
           <td><%= product.sku %></td>
           <td><%= product.name %></td>
           <td><%= product.author %></td>
-          <td><%= product.description %></td>
-          <td><%= product.size %></td>
+          <td><%= product.description.truncate(20) %></td>
+          <td><%= product.dimension %></td>
           <td>$<%= product.price %></td>
           <td><% product.categories.each do |c| %>
                   - <%= c.name %><br>

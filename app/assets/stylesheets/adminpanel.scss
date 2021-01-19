@@ -1,0 +1,80 @@
+//Panel admin
+.panel-admin{
+    background-color:#FFDCBA;
+}
+
+.title-panel-admin{
+    font-size: 1rem;
+}
+
+.text-panel-admin{
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+// Table products
+
+.title-table-products{
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.text-table-products{
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+//Table administradores 
+.title-table-admins{
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.text-table-admins{
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+// Table users  
+.title-table-users{
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.text-table-users{
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+
+@media (min-width: 576px) { 
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+    //Panel admin
+    .title-panel-admin{
+        font-size: 1.5rem;
+    }
+
+    .text-panel-admin{
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1200px) { 
+    //Panel admin
+    .title-panel-admin{
+        font-size: 1.5rem;
+    }
+
+    .text-panel-admin{
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}

@@ -12,19 +12,182 @@ body * {
   padding: 0;
 }
 
+//MOBILE FIRST
+
+//Navbar
 .bg-crema{
   background-color: white;
 }
 
 .navbar-brand{
+    height: 40px;
+    margin-left: -2rem;
+}
+
+.menu-text-dropdown{
+  font-size: 0.7rem;
+}
+
+.nav-dropdown{
+  margin-left: -3rem;
+}
+
+.dropdown-right-align{
+  font-size: 0.7rem;
+  margin-right: -0.5rem;
+}
+
+.text-dropdown{
+  font-size: 0.6rem;
+}
+
+.navbar-toggler-icon{
+  width: 1.2rem;
+ }
+
+// Seccion contacto
+.contacto{
+  background-color:  #CAE3D5;
+  color: black;
+  padding: 1.5rem;
+}
+
+.titulo-somos{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.text-somos{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 0.6rem;
+}
+
+
+//--------------------------------------------------------------------------
+//Tablet 
+@media (min-width: 768px) {
+
+  .navbar-brand{
+      height: 60px;
+  }
+
+  .dropdown-right-align{
+    margin-right: 1rem;
+  }
+
+  .menu-text-dropdown{
+    font-size: 0.8rem;
+  }
+
+  .text-dropdown{
+    font-size: 0.8rem;
+  }
+
+  // Seccion contacto
+  .contacto{
+    background-color:  #CAE3D5;
+    color: black;
+    padding: 2rem;
+  }
+
+  .titulo-somos{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .text-somos{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
+
+}
+
+//--------------------------------------------------------------------------
+//Laptop - LG 
+@media (min-width: 992px) {
+
+  // Nav configuration 
+
+  .navbar-brand{
     height: 60px;
 }
 
-.home-decor{
-  height: 420px;
-  margin-bottom: 4.5rem;
-}
+  .dropdown-right-align{
+    margin-right: 1rem;
+  }
 
-.bg-about{
-  background-color: white;
+  .menu-text-dropdown{
+    font-size: 1rem;
+  }
+
+  .text-dropdown{
+    font-size: 1rem;
+  }
+
+
+  // Sección contacto
+
+  .contacto{
+    background-color:  #CAE3D5;
+    color: black;
+    padding: 3rem 6rem;
+  }
+
+  .titulo-somos{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  .text-somos{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+}  
+
+//--------------------------------------------------------------------------
+// Extra-Large XL (Laptop en chrome)
+@media (min-width: 1200px) {
+
+  .navbar-brand{
+      height: 60px;
+  }
+
+  .dropdown-right-align{
+    margin-right: 1rem;
+  }
+
+  .menu-text-dropdown{
+    font-size: 1rem;
+  }
+
+  .text-dropdown{
+    font-size: 1rem;
+  }
+
+  // Seccion contacto
+  .contacto{
+    background-color:  #CAE3D5;
+    color: black;
+    padding: 2rem;
+  }
+
+  .titulo-somos{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .text-somos{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
+
 }

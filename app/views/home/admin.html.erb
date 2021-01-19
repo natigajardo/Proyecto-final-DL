@@ -1,22 +1,26 @@
 <% content_for :header do %>  
-  <h2 class="text-center py-3">Panel del administrador</h2>
+  <div class="panel-admin">
+    <h2 class="text-center py-3 title-panel-admin">Panel del administrador</h2>
+  </div>
 <% end %>
 
-<div class="container">
+<hr/>
+
+<div class="container mt-2">
     <!-- Nav vertical panel de admin -->
 <ul class="nav nav-tabs navbar-dark text-center" id="myTab" role="tablist">
 
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" id="orders-tab" data-toggle="tab" href="#orders" role="tab" aria-controls="orders" aria-selected="false">Ordenes</a>
+    <a class="nav-link active text-panel-admin" id="orders-tab" data-toggle="tab" href="#orders" role="tab" aria-controls="orders" aria-selected="false">Ordenes</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="admin-tab" data-toggle="tab" href="#admin" role="tab" aria-controls="admin" aria-selected="false">Administradores</a>
+    <a class="nav-link text-panel-admin" id="admin-tab" data-toggle="tab" href="#admin" role="tab" aria-controls="admin" aria-selected="false">Administradores</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="users-tab" data-toggle="tab" href="#users" role="tab" aria-controls="users" aria-selected="false">Usuarios</a>
+    <a class="nav-link text-panel-admin" id="users-tab" data-toggle="tab" href="#users" role="tab" aria-controls="users" aria-selected="false">Usuarios</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="products-tab" data-toggle="tab" href="#products" role="tab" aria-controls="products" aria-selected="false">Productos</a>
+    <a class="nav-link text-panel-admin" id="products-tab" data-toggle="tab" href="#products" role="tab" aria-controls="products" aria-selected="false">Productos</a>
   </li>
 </ul>
 
@@ -41,5 +45,7 @@
 
 </div>
 </div>
+
+
 
 

@@ -13,52 +13,52 @@
 
   <div class="field">
     <%= form.label :sku %>
-    <%= form.text_field :sku %>
+    <%= form.text_field :sku, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :author %>
-    <%= form.text_field :author %>
+    <%= form.text_field :author, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :dimension %>
-    <%= form.text_field :dimension %>
+    <%= form.text_field :dimension, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.number_field :price %>
+    <%= form.number_field :price, class: "form-control" %>
   </div>
 
   <div class="field w-50 py-4">
     <%= form.label :images %>
-      <%= form.file_field :images, multiple: true %> 
-    </div>
-
-    <div class="field pt-1">
-      <%= form.label :categories %>
-        <%= form.collection_check_boxes(:category_ids, 
-                                        Category.all,
-                                        :id,
-                                        :name) do |b| %><br>
-          <%= b.label class:"label-checkbox" do %>
-          <%= b.check_box + b.text %>
-        <%end %>
-      <%end%>                               
+    <%= form.file_field :images, multiple: true %> 
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="field pt-1">
+    <%= form.label :Categorias %>
+      <%= form.collection_check_boxes(:category_ids, 
+                                      Category.all,
+                                      :id,
+                                      :name) do |b| %><br>
+        <%= b.label class:"label-checkbox" do %>
+        <%= b.check_box + b.text %>
+      <%end %>
+    <%end%>                               
+  </div>
+
+  <div class="actions pt-2 mb-2">
+    <%= form.submit "Crear nuevo producto", class: "btn btn-info"%>
   </div>
 <% end %>
