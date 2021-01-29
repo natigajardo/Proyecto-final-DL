@@ -5,6 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:google_oauth2]
 
+  has_many :orders
+  
+  validates :name, :address, presence: true 
+
   after_initialize do
    if self.new_record?
      self.role ||= :user

@@ -4,12 +4,13 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.all.order("created_at desc")
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    @order_item = current_order.order_items.new
   end
 
   # GET /products/new

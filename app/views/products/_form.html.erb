@@ -41,6 +41,11 @@
     <%= form.number_field :price, class: "form-control" %>
   </div>
 
+  <div class="field">
+    <%= form.label :stock %>
+    <%= form.number_field :stock, class: "form-control" %>
+  </div>
+
   <div class="field w-50 py-4">
     <%= form.label :images %>
     <%= form.file_field :images, multiple: true %> 

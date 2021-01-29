@@ -20,8 +20,8 @@ body * {
 }
 
 .navbar-brand{
-    height: 40px;
-    margin-left: -2rem;
+    height: 42px;
+    margin-left: 2rem;
 }
 
 .menu-text-dropdown{
@@ -45,6 +45,20 @@ body * {
   width: 1.2rem;
  }
 
+ .icon-navbar{
+   color: black;
+   margin-right: 3rem;
+   margin-bottom: 1.5rem;
+ }
+
+ .sign-in-bottom{
+  font-size: 0.8rem;
+ }
+
+ .sing-up-bottom{
+  font-size: 0.8rem;
+ }
+
 // Seccion contacto
 .contacto{
   background-color:  #CAE3D5;
@@ -64,6 +78,8 @@ body * {
   font-size: 0.6rem;
 }
 
+@media (min-width: 576px) { 
+}
 
 //--------------------------------------------------------------------------
 //Tablet 
@@ -71,6 +87,7 @@ body * {
 
   .navbar-brand{
       height: 60px;
+      margin-left: 5rem;
   }
 
   .dropdown-right-align{
@@ -83,6 +100,12 @@ body * {
 
   .text-dropdown{
     font-size: 0.8rem;
+  }
+
+  .icon-navbar{
+    color: black;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   // Seccion contacto
@@ -114,6 +137,7 @@ body * {
 
   .navbar-brand{
     height: 60px;
+    margin-left:-2rem;
 }
 
   .dropdown-right-align{
@@ -126,6 +150,12 @@ body * {
 
   .text-dropdown{
     font-size: 1rem;
+  }
+
+  .icon-navbar{
+    color: black;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;;
   }
 
 
@@ -169,6 +199,12 @@ body * {
 
   .text-dropdown{
     font-size: 1rem;
+  }
+
+  .icon-navbar{
+    color: black;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   // Seccion contacto

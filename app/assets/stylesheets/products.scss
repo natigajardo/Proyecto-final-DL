@@ -2,8 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // Card de productos generales 
-.color-bg-products{
+
+.margin-all-products{
   background-color: white;
+  text-align: center;
+  margin: 0rem 3rem;
 }
 
 .medidas-cards-productos{
@@ -27,11 +30,59 @@
   height: auto;
 }
 
+//Show
+.back-bottom1{
+  margin-left: -3rem;
+}
+
+.back-bottom2{
+  margin-left: -2rem;
+  margin-bottom: 0.7rem;
+}
+
+.ficha-product-datos{
+  margin: 0rem 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  
+}
+
+.text-button-add-cart, .back-bottom1 {
+  font-size: 0.8rem;
+}
+
+.title-show{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.author-show{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.description-title-show, .size-title-show, .price-title-show{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 0.8rem;
+}
+
+.description-show, .size-show, .price-show{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+
 //-----------------------------------------------------------
 @media (min-width: 576px) { 
    // Card de productos generales 
-   .color-bg-products{
+   .margin-all-products{
     background-color: white;
+    text-align: center;
+    margin-left: 7rem;
   }
 
   .medidas-cards-productos{
@@ -53,14 +104,59 @@
     padding-top: 0.5rem;
     width: 285px;
     height: auto;
+  }
+
+  //Show
+  .back-bottom1{
+    margin-left: -8rem;
+  }
+
+  .back-bottom2{
+    margin-left: -2rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .ficha-product-datos{
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .text-button-add-cart, .back-bottom1 {
+    font-size: 0.8rem;
+  }
+
+  .title-show{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .author-show{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+  }
+
+  .description-title-show, .size-title-show, .price-title-show{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 0.8rem;
+  }
+
+  .description-show, .size-show, .price-show{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 0.8rem;
   }
 }
 
 //-----------------------------------------------------------
 @media (min-width: 768px) {
   // Card de productos generales 
-  .color-bg-products{
+  .margin-all-products{
     background-color: white;
+    text-align: center;
+    margin-left: 3rem;
   }
 
   .medidas-cards-productos{
@@ -82,6 +178,48 @@
     padding-top: 0.5rem;
     width: 285px;
     height: auto;
+  }
+
+  //Show
+  .back-bottom1{
+    margin-left: -2.5rem;
+  }
+
+  .back-bottom2{
+    margin-left: -1rem;
+    margin-top: 0.7rem;
+  }
+
+  .ficha-product-datos{
+    margin-top: -0.5rem;
+  }
+
+  .text-button-add-cart, .back-bottom1 {
+    font-size: 0.8rem;
+  }
+
+  .title-show{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .author-show{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+  }
+
+  .description-title-show, .size-title-show, .price-title-show{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 0.8rem;
+  }
+
+  .description-show, .size-show, .price-show{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 0.8rem;
   }
 
  }
@@ -96,9 +234,11 @@
         height: auto;
       }
  
-    .color-bg-products{
+      .margin-all-products{
         background-color: white;
-    }
+        text-align: center;
+        margin-left: 1.7rem;
+      }
 
     .medidas-cards-productos{
         width: 302px;
@@ -116,8 +256,13 @@
     }
 
     // SHOW  
-    .back-bottom{
-        margin-left: -5rem;
+    .back-bottom1{
+      margin-left: -5rem;
+    }
+  
+    .back-bottom2{
+      margin-left: -1rem;
+      margin-top: 0.7rem;
     }
 
     .carrusel-product-show{
@@ -126,7 +271,7 @@
     }
 
     .ficha-product-datos{
-        margin-top: 1rem;
+        margin-top: 0rem;
     }
 
     .margenes-show{
@@ -166,8 +311,11 @@
 @media (min-width: 1200px) { 
 
   // Card de productos generales 
-  .color-bg-products{
+  .margin-all-products{
     background-color: white;
+    text-align: center;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
   }
 
   .medidas-cards-productos{
@@ -192,8 +340,13 @@
   }
 
   // SHOW  
-  .back-bottom{
+
+  .back-bottom1{
     margin-left: -8rem;
+  }
+
+  .back-bottom2{
+    margin-left: -3rem;
   }
 
   .carrusel-product-show{

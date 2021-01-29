@@ -32,43 +32,52 @@
     <!-- Left elements -->
 
     <!-- Center elements -->
-    <!-- Title -->
-    <div class="navbar-nav flex-row">
-      <%= link_to root_path do %>
-        <%= image_tag("Logo8.png", alt: 'Logo',class: 'navbar-brand')%>
-      <% end %>
-    </div>  
+      <!-- Title -->
+      <div class="navbar-nav flex-row">
+        <%= link_to root_path do %>
+          <%= image_tag("Logo8.png", alt: 'Logo',class: 'navbar-brand')%>
+        <% end %>
+      </div>  
 
     <!-- Center elements -->
 
     <!-- Right elements -->
-    <div class="navbar-nav flex-row nav-dropdown dropdown-right-align">
-    <% if user_signed_in? %>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-dark menu-text-dropdown" id="navbarDropdown" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user text-dark"></i> 
-          Mi menú 
-        </a>
-
-        <% if current_user.role == 'user' %>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to('Editar mis datos', edit_user_registration_path(@user), class: "dropdown-item  text-dropdown" ) %>
-            <%= link_to('Mis compras', paneluser_path, method: :get, class: "dropdown-item text-dropdown")%>
-            <div class="dropdown-divider"></div>
-            <%= link_to('Log out', destroy_user_session_path, method: :delete, class: "dropdown-item text-dropdown") %>
-          </div>
-        <% elsif current_user.role == 'admin' %>  
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to('Editar mis datos', edit_user_registration_path(@user), class: "dropdown-item text-dropdown" ) %>
-            <%= link_to('Admin', homeadmin_path, method: :get, class: "dropdown-item text-dropdown") %>
-            <div class="dropdown-divider"></div>
-            <%= link_to('Log out', destroy_user_session_path, method: :delete, class: "dropdown-item text-dropdown") %>
-          </div>
-        <% end %>  
-      </li>
-    </div>    
+    <ul class="navbar-nav flex-row">
+        <% if user_signed_in? %>
+            <!--Carrito icon -->
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light text-dark">
+                <%= link_to "Cart", cart_path, class: "fas fa-cart-plus fa-lg icon-navbar" %>
+              </a>
+            </li>
+            
     
+            <!-- Menu user -->
+            <li class="nav-item dropdown container nav-dropdown dropdown-right-align">
+              <a class="nav-link dropdown-toggle text-dark menu-text-dropdown" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user text-white"></i> 
+                Mi menú 
+              </a>
+
+              <% if current_user.role == 'user' %>
+                <div class="dropdown-menu dropdown-menu-right dropdown-default text-dropdown" aria-labelledby="navbarDropdownMenuLink-333">
+                    <%= link_to('Editar mis datos', edit_user_registration_path(@user), class: "dropdown-item  text-dropdown" ) %>
+                    <%= link_to('Mis compras', paneluser_path, method: :get, class: "dropdown-item text-dropdown")%>
+                    <div class="dropdown-divider"></div>
+                    <%= link_to('Log out', destroy_user_session_path, method: :delete, class: "dropdown-item text-dropdown") %>
+                </div>
+              <% elsif current_user.role == 'admin' %>  
+                <div class="dropdown-menu dropdown-menu-right dropdown-default text-dropdown" aria-labelledby="navbarDropdownMenuLink-333">
+                    <%= link_to('Editar mis datos', edit_user_registration_path(@user), class: "dropdown-item text-dropdown" ) %>
+                    <%= link_to('Admin', homeadmin_path, method: :get, class: "dropdown-item text-dropdown") %>
+                    <div class="dropdown-divider"></div>
+                    <%= link_to('Log out', destroy_user_session_path, method: :delete, class: "dropdown-item text-dropdown") %>
+                </div>
+              <% end %>  
+            </li>
+      </ul>  
+       
     <% else %> 
 
       <div class="navbar">    

@@ -1,0 +1,31 @@
+<table class="table table-hover table-responsive">
+  <thead class="titles-items-cart">
+    <tr>
+      <th class="">Producto</th>
+      <th class="">Nombre</th>
+      <th class="">Precio unidad</th>
+      <th class="">Cantidad</th>
+      <th class="">Actualizar</th>
+      <th class="">Remover item</th>
+      <th class="">Subtotal</th>
+    </tr>
+  </thead>
+
+  <tbody class="text-items-cart">
+  <% @order_items.each do |item| %>
+    <tr>
+      <td><%= item.product.images.first %></td>
+      <td><%= item.product.name %></td>
+      <td><%= item.product.price %></td>
+      <%= form_with(model: item, remote: true) do |f| %>
+        <%= f.hidden_field :product_id, value: item.product.id %>
+        <td><%= f.number_field :quantity, value: item.quantity.to_i, class: "form-control text-quantity-cart" %></td>
+        <td><%= f.submit "Actualizar item", class: "btn btn-dark text-white btn-cart" %></td>
+        <td><%= link_to "Remover item", item, method: :delete, remote: true, class: "btn btn-warning btn-cart" %></td>
+      <% end %>
+      <td><%= item.subtotal %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'cart', to: 'cart#show'
+
+  resources :order_items
+  get 'bought/:order_item_id', to: 'order_items#bought', as: 'bought_item'
   resources :products
   resources :categories
 
