@@ -1,23 +1,24 @@
 <div class="container">
-  <h1 class="mb-3">Carro</h1>
+  <div class="row">
+    <h1 class="mb-3 mt-4">Carro</h1>
 
-  <div class="float-right mb-3">
-    <%= link_to "Seguir comprando", products_path, class: "btn btn-dark text-white" %>
-  </div>
-
-  <div id="cart-item" >
-    <%= render "cart_item" %>
-  </div>
-
-  <div class="float-right">
-    <div id="cart" class="d-inline">
-      <%= render 'cart/cart' %>
+    <div class="button-seguir-comprando col-3 float-right">
+      <%= link_to "Seguir comprando", products_path, class: "btn btn-dark text-white" %>
     </div>
-    <div id="boton-comprar" class="d-inline ml-4">
-      <%= link_to "Pagar", bought_item_path(@order_items), remote: true, data: { disable_with: "Procesando pago"}, class: "btn btn-success" %>
+
+    <div id="cart-item" class: "text-center col-12" >
+      <%= render "cart_item" %>
     </div>
+
+    <div>
+      <div id="cart" class="d-inline">
+        <%= render 'cart/cart' %>
+      </div>
+      <div id="boton-comprar" class="d-inline ml-4">
+        <%= render 'cart/boton_pagar' %>
+      </div>
+    </div>
+
+    <hr>
   </div>
-
-  <hr>
-
 </div>

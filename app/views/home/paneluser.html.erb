@@ -1,1 +1,32 @@
-<h1>Mis compras</h1>
+<div class="container">
+  <h1>Mis compras</h1>
+
+    <div class="pt-3 table-responsive">
+
+      <table class="table margin-table-admin table-striped table-bordered">
+        
+        <thead class="title-table-products">
+          <tr>
+            <th scope="col">Fecha</th>
+            <th scope="col">Order Number</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Sku</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Author</th>
+            <th scope="col">Tamaño</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Total items</th>
+            <th scope="col">Total orden</th>
+            <th scope="col">Estado</th>
+            <th scope="col" colspan="1">Cancelar orden</th>
+          </tr>
+        </thead>
+
+        <tbody class="text-table-products">
+          <%= render "shop" %>
+        </tbody>
+      </table>
+    </div>
+ 
+</div>  

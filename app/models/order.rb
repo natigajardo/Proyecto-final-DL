@@ -5,6 +5,9 @@ class Order < ApplicationRecord
   before_save :set_total
   before_create -> { generate_number(RANDOM_SIZE) }
 
+  #OPCIONES DE STATUS
+  STATE = %w{ Creada Pendiente Aceptada Enviado Finalizado Rechazada }
+
   #AGREGAR CODIGO UNICO A LA ORDEN : NUMERO 
   ORDER_PREFIX = 'PO'
   RANDOM_SIZE = 9

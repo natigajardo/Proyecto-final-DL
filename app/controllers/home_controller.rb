@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   end
 
   def paneluser
-
+    @orders = current_user.orders.all
   end 
 
 end

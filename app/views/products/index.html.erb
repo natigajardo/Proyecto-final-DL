@@ -16,38 +16,40 @@
   
           <!-- Inicio card -->
           <% @products.each do |p| %>
-          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-4" >
-            <!-- Card -->
-            <div class="card medidas-cards-productos">
-    
-              <!-- Card image -->
-              <div class="view overlay text-center">
-                <%= link_to (image_tag p.images.first, class: "card-image-medidas"), p %>
-                <div class="mask rgba-white-slight"></div>
+            <% if p.stock > 0 %>
+              <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-4" >
+                <!-- Card -->
+                <div class="card medidas-cards-productos">
+        
+                  <!-- Card image -->
+                  <div class="view overlay text-center">
+                    <%= link_to (image_tag p.images.first, class: "card-image-medidas"), p %>
+                    <div class="mask rgba-white-slight"></div>
+                  </div>
+        
+                  <!-- Card content -->
+                  <div class="card-body">
+                    <div class="border-bottom"></div>
+                      <!-- Title -->
+                    <h4 class="card-title pt-3 text-center"><%= p.name %></h4>
+                    <hr>
+                      <!-- Text -->
+                    <p class="card-text text-center">Autor: <%= p.author %></p>
+                  </div>
+        
+                  <div class="border-bottom"></div>
+        
+                      <!-- Card footer -->
+                  <div class="rounded-bottom color-card-footer lighten-3 py-3">
+                    <ul class="list-unstyled list-inline font-small">
+                      <li class="list-inline-item pr-2 white-text"> <%= link_to 'Ver más', p, class: "btn btn-dark" %></li>
+                      <span class="price-text-card">Precio: $<%= p.price %></span>  
+                    </ul>
+                  </div>
+                        
+                </div>  
               </div>
-    
-              <!-- Card content -->
-              <div class="card-body">
-                <div class="border-bottom"></div>
-                  <!-- Title -->
-                <h4 class="card-title pt-3 text-center"><%= p.name %></h4>
-                <hr>
-                  <!-- Text -->
-                <p class="card-text text-center">Autor: <%= p.author %></p>
-              </div>
-    
-              <div class="border-bottom"></div>
-    
-                  <!-- Card footer -->
-              <div class="rounded-bottom color-card-footer lighten-3 py-3">
-                <ul class="list-unstyled list-inline font-small">
-                  <li class="list-inline-item pr-2 white-text"> <%= link_to 'Ver más', p, class: "btn btn-dark" %></li>
-                  <span class="price-text-card">Precio: $<%= p.price %></span>  
-                </ul>
-              </div>
-                    
-            </div>  
-          </div> 
+            <% end %>   
           <% end %> 
           <!-- Fin card -->
 

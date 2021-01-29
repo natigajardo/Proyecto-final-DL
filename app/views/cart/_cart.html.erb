@@ -1,1 +1,1 @@
-<%= "Tu carro tiene #{current_order.order_items.size} items con un valor total de $#{current_order.total}" %>
+<%= "Tu carro tiene #{current_order.order_items.collect{|order_item| order_item.valid? ? order_item.quantity : 0}.sum } items con un valor total de $#{current_order.total}" %>

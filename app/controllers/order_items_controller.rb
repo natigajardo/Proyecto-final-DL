@@ -25,7 +25,12 @@ class OrderItemsController < ApplicationController
       @product = item.product
       @product.stock -= item.quantity
       @product.save 
+      item.save 
     end
+    sleep 4
+    @order.state = "Pendiente"
+    @order.save 
+    redirect_to root_path
   end 
 
   private 
