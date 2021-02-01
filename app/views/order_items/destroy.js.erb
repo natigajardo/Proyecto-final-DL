@@ -1,0 +1,5 @@
+$("#cart-item tbody").html("");
+$("#cart").html("");
+
+$("#cart-item tbody").html("<%= j render 'cart/order_item' %>");
+$("#cart").html("<%= j render 'cart/cart' %> ");

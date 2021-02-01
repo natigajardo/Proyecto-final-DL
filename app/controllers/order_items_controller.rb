@@ -75,10 +75,16 @@ class OrderItemsController < ApplicationController
   def destroy
     @order = Order.find(session[:order_id])
     @order_item.destroy
-    respond_to do |format|
-      format.html { redirect_to cart_path, notice: 'Order item was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    if @order.order_items.count > 0 
+      respond_to do |format|
+        format.html { redirect_to root_path, notice: 'Order item was successfully destroyed.' }
+        format.json { head :no_content }
+        format.js
+      end
+    else 
+      redirect_to root_path 
+    end 
+    @order_items = @order.order_items
   end
 
   private

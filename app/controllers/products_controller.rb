@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_order, only: [:show]
 
   # GET /products
   # GET /products.json
@@ -10,7 +11,9 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @order_item = current_order.order_items.new
+    if current_user 
+      @order_item = current_order.order_items.new
+    end 
   end
 
   # GET /products/new
@@ -73,5 +76,9 @@ class ProductsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def product_params
       params.require(:product).permit(:sku, :name, :author, :description, :dimension, :price, :sold, {category_ids: []}, {images: []} )
+    end
+
+    def set_order 
+      @order = current_order 
     end
 end
