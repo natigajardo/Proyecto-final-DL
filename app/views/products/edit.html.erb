@@ -1,6 +1,7 @@
-<h1>Editing Product</h1>
+<div class="container">
+  <h4 class="my-3">Editing Product</h4>
 
-<%= render 'form', product: @product %>
+  <%= render 'form', product: @product %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+  <%= link_to 'Back', homeadmin_path, class: "btn btn-dark text-white" %>
+</div>

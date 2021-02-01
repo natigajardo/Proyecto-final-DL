@@ -17,7 +17,7 @@ class OrderItemsTest < ApplicationSystemTestCase
     fill_in "Order", with: @order_item.order_id
     fill_in "Product", with: @order_item.product_id
     fill_in "Quantity", with: @order_item.quantity
-    fill_in "Total", with: @order_item.total
+    fill_in "Subtotal", with: @order_item.subtotal
     fill_in "Unit price", with: @order_item.unit_price
     click_on "Create Order item"
 
@@ -32,7 +32,7 @@ class OrderItemsTest < ApplicationSystemTestCase
     fill_in "Order", with: @order_item.order_id
     fill_in "Product", with: @order_item.product_id
     fill_in "Quantity", with: @order_item.quantity
-    fill_in "Total", with: @order_item.total
+    fill_in "Subtotal", with: @order_item.subtotal
     fill_in "Unit price", with: @order_item.unit_price
     click_on "Update Order item"
 

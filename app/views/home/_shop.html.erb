@@ -1,28 +1,51 @@
 <% @orders.each do |order| %>
 
-  <% if order.state == 'Pendiente' || order.state == 'Aceptada' || order.state == 'Rechazada' || order.state == 'Enviado' || order.state == 'Finalizado' %>
+  <% if order.state == 'Pendiente' || order.state == 'Aceptada' || order.state == 'Rechazada' || order.state == 'Enviado' || order.state == 'Finalizado' || order.state == "Cancelada" %>
     <tr>
       <td><%= order.created_at %></td>
       <td><%= order.number %></td>
 
-      <% order.order_items.each do |item| %>
-        <td><%= image_tag(item.product.images.first.variant(resize: "50x50").processed) %></td>
-        <td><%= item.product.sku %></td>
-        <td><%= item.product.name %></td>
-        <td><%= item.product.author %></td>
-        <td><%= item.product.dimension %></td>
-        <td><%= item.product.price %></td>
-        <td><%= item.quantity %></td>
-        <td><%= item.subtotal %></td>
-      <% end %>    
-
+      
+        <td><% order.order_items.each do |item| %>
+              <%= image_tag(item.product.images.first.variant(resize: "50x50").processed) %><br><br>
+            <% end %>
+        </td>
+        <td><% order.order_items.each do |item| %>
+            - <%= item.product.sku %><br><br>
+            <% end %>
+        </td>
+        <td><% order.order_items.each do |item| %>
+            - <%= item.product.name %><br><br>
+            <% end %>
+        </td>
+        <td><% order.order_items.each do |item| %>
+            - <%= item.product.author %><br><br>
+            <% end %>
+        </td>
+        <td><% order.order_items.each do |item| %>
+            - <%= item.product.dimension %><br><br>
+            <% end %>
+        </td>
+        <td><% order.order_items.each do |item| %>
+            - <%= item.product.price %><br><br>
+            <% end %>
+        </td>
+        <td><% order.order_items.each do |item| %>
+            - <%= item.quantity %><br><br><br>
+            <% end %>
+        </td>
+        <td><% order.order_items.each do |item| %>
+            - <%= item.subtotal %><br><br>
+            <% end %>
+        </td>
+       
       <td><%= order.total %></td>
       <td><%= order.state %></td>
 
       <% if order.state == 'Pendiente' %>
-      <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: '¿Estás seguro de eliminar tu orden?' }, class: "btn btn-warning" %></td>
+        <td><%= link_to 'Cancelar orden', cancel_order_path(order), remote: true, data: { confirm: '¿Estás seguro de eliminar tu orden?' }, class: "btn btn-warning btn-cancel-order" %></td>
       <% else%>
-        <td> Ya no puedes cancelar esta orden </td>  
+        <td> Esta orden fue cancelada </td>  
       <% end %> 
     
     </tr>

@@ -1,22 +1,37 @@
 <div class="container">
-  <div class="row">
+  <div class="table-cart">
     <h1 class="mb-3 mt-4">Carro</h1>
 
-    <div class="button-seguir-comprando col-3 float-right">
+    <div class="button-seguir-comprando float-right">
       <%= link_to "Seguir comprando", products_path, class: "btn btn-dark text-white" %>
     </div>
 
-    <div id="cart-item" class: "text-center col-12" >
-      <%= render "cart_item" %>
-    </div>
+    <table class="table table-hover table-responsive text-center" id="cart-item" >
+      <thead class="titles-items-cart">
+        <tr>
+          <th class="">Producto</th>
+          <th class="">Nombre</th>
+          <th class="">Precio unidad</th>
+          <th class="">Cantidad</th>
+          <th class="">Subtotal</th>
+          <th class="">Remover item</th>
+        </tr>
+      </thead>
 
-    <div>
-      <div id="cart" class="d-inline">
+      <tbody class="text-items-cart text-content-table-cart">
+        <%= render "order_item" %>
+      </tbody>
+    </table>
+  
+    <div class="titles-items-cart">
+      <div id="cart" class="d-inline ml-4">
         <%= render 'cart/cart' %>
       </div>
+
       <div id="boton-comprar" class="d-inline ml-4">
-        <%= render 'cart/boton_pagar' %>
+      <%= link_to "Pagar", bought_item_path(@order_items), data: { disable_with: "Procesando pago"}, class: "btn btn-success" %>
       </div>
+
     </div>
 
     <hr>

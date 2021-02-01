@@ -58,7 +58,7 @@
           <% if user_signed_in? %>
 
             <div class="col-6">
-            <%= form_with(model: @order_item, remote: true)  do |f| %>
+            <%= form_with(model: @order_item, local: true)  do |f| %>
               <%= f.hidden_field :product_id, value: @product.id %>
               <%= f.number_field :quantity, value: 1, min: 1, class: "form-control w-50" %>
               <%= f.submit "Agregar al carrito", class: "btn btn-info text-button-add-cart mt-2" %>

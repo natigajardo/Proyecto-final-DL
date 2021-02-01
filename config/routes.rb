@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
+  resources :order_items
+  resources :orders
   get 'cart', to: 'cart#show'
-
-  resources :order_items, only: [:create, :update, :destroy]
   get 'bought/:order_item_id', to: 'order_items#bought', as: 'bought_item'
+  get 'cancel_order/:order_id', to: 'orders#cancel_order', as: 'cancel_order'
+
   resources :products
   resources :categories
-  resources :orders
-
+  
   #devise_for :users
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   resources :users, only: [:edit, :update] 

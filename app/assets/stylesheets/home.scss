@@ -59,6 +59,16 @@ body * {
   font-size: 0.8rem;
  }
 
+ .text-cart{
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .btn-cart{
+    width: 6em;
+    margin-right: 2.7rem;
+  }
+
 // Seccion contacto
 .contacto{
   background-color:  #CAE3D5;
@@ -79,6 +89,12 @@ body * {
 }
 
 @media (min-width: 576px) { 
+
+  .btn-cart{
+    width: 6em;
+    margin-right: 2.7rem;
+  }
+
 }
 
 //--------------------------------------------------------------------------
@@ -106,6 +122,11 @@ body * {
     color: black;
     margin-right: 2rem;
     margin-bottom: 1.5rem;
+  }
+
+  .btn-cart{
+    width: 6em;
+    margin-right: 2.5rem;
   }
 
   // Seccion contacto
@@ -158,6 +179,11 @@ body * {
     margin-bottom: 1.5rem;;
   }
 
+  .btn-cart{
+    width: 6em;
+    margin-right: 2rem;
+  }
+
 
   // Sección contacto
 
@@ -205,6 +231,11 @@ body * {
     color: black;
     margin-right: 2rem;
     margin-bottom: 1.5rem;
+  }
+
+  .btn-cart{
+    width: 6em;
+    margin-right: 2rem;
   }
 
   // Seccion contacto

@@ -16,6 +16,7 @@
         <th scope="col">Description</th>
         <th scope="col">Size</th>
         <th scope="col">Price</th>
+        <th scope="col">Stock</th>
         <th scope="col">Category</th>
         <th scope="col" colspan="3">Options</th>
       </tr>
@@ -37,6 +38,7 @@
           <td><%= product.description.truncate(20) %></td>
           <td><%= product.dimension %></td>
           <td>$<%= product.price %></td>
+          <td><%= product.stock %></td>
           <td><% product.categories.each do |c| %>
                   - <%= c.name %><br>
               <%end%>    

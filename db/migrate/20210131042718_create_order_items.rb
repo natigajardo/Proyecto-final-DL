@@ -4,8 +4,8 @@ class CreateOrderItems < ActiveRecord::Migration[5.2]
       t.integer :quantity
       t.integer :unit_price
       t.integer :subtotal
-      t.references :product, foreign_key: true
       t.references :order, foreign_key: true
+      t.references :product, foreign_key: true
 
       t.timestamps
     end

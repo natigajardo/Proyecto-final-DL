@@ -1,12 +1,12 @@
 class Order < ApplicationRecord
   belongs_to :user
-  has_many :order_items
+  has_many :order_items, dependent: :destroy
   has_many :products, through: :order_items
   before_save :set_total
   before_create -> { generate_number(RANDOM_SIZE) }
 
   #OPCIONES DE STATUS
-  STATE = %w{ Creada Pendiente Aceptada Enviado Finalizado Rechazada }
+  STATE = %w{ Pendiente Aceptada Enviado Finalizado Rechazada }
 
   #AGREGAR CODIGO UNICO A LA ORDEN : NUMERO 
   ORDER_PREFIX = 'PO'

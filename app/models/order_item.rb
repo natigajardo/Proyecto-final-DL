@@ -1,12 +1,11 @@
 class OrderItem < ApplicationRecord
-  belongs_to :product
   belongs_to :order
+  belongs_to :product
   before_save :set_unit_price
   before_save :set_subtotal
 
   #Si la orden mantiene su estado de "creado" por más de 20 minutos, se elimina.
-  def delete_order_created
-  end 
+
 
   #Precios de los productos 
   def unit_price

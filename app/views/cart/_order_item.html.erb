@@ -1,0 +1,19 @@
+<% @order_items.each do |item| %>
+  <tr>
+    <td><%= image_tag(item.product.images.first.variant(resize: "50x50").processed) %></td>
+    <td><%= item.product.name %></td>
+    <td><%= item.product.price %></td>
+    <td><%= item.quantity %></td>
+    <td><%= item.subtotal %></td>
+    <td><%= link_to 'Remover item', item, method: :delete, data: { confirm: 'Estás seguro?' }, class: "btn btn-warning btn-cart" %></td>
+  </tr>
+<% end %>  
+    
+  
+<!-- PARA EN UN FUTURO VER LA POSIBILIDAD DE INCOPORAR ESTE FORM EN LA TABLA DE CART
+<%#= form_for item, remote: true do |f| %>
+  <%#= f.hidden_field :product_id, value: item.product.id %>
+  <td><%#= f.number_field :quantity, value: item.quantity.to_i, class: "form-control text-quantity-cart" %></td>
+  <td><%#= f.submit "Actualizar item", class: "btn btn-dark text-white btn-cart" %></td>
+<%# end %>
+-->

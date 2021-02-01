@@ -6,6 +6,7 @@ class HomeController < ApplicationController
     @products = Product.all.order("created_at desc")
     @users = User.where(role: 'admin')
     @users1 = User.where(role: 'user')
+    @orders = Order.all
   end
 
   def paneluser

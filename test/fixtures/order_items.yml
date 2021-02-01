@@ -3,13 +3,13 @@
 one:
   quantity: 1
   unit_price: 1
-  total: 1
-  product: one
+  subtotal: 1
   order: one
+  product: one
 
 two:
   quantity: 1
   unit_price: 1
-  total: 1
-  product: two
+  subtotal: 1
   order: two
+  product: two

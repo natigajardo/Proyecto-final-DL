@@ -10,14 +10,4 @@ class Product < ApplicationRecord
     validates :price, length: { maximum: 7 }
     validates :sku, uniqueness: true 
 
-    #def visible_index_products
-    #    @products = Product.all 
-    #        @products.each do |p|
-    #            if p.stock > 0 
-    #                return p 
-    #            end  
-    #        end   
-#
-    #end
-
 end

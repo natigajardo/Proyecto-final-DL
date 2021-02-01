@@ -43,15 +43,20 @@
 
     <!-- Right elements -->
     <ul class="navbar-nav flex-row">
+
         <% if user_signed_in? %>
-            <!--Carrito icon -->
-            <li class="nav-item">
-              <a class="nav-link waves-effect waves-light text-dark">
-                <%= link_to "Cart", cart_path, class: "fas fa-cart-plus fa-lg icon-navbar" %>
-              </a>
-            </li>
-            
-    
+
+        <!-- Menu cart que se muestra solo cuando tiene min 1 item -->
+          <% if total_cart_items %>
+            <div class="text-cart">  
+            <%= link_to cart_path, class:"navbar-item btn btn-dark text-white btn-cart" do %>
+              <span class="nav-link text-white fa fa-shopping-cart"><%= cart_count_over_one %>
+              </span>
+            <% end %>
+            </div>
+          <% end %>
+
+
             <!-- Menu user -->
             <li class="nav-item dropdown container nav-dropdown dropdown-right-align">
               <a class="nav-link dropdown-toggle text-dark menu-text-dropdown" id="navbarDropdownMenuLink-4" data-toggle="dropdown"

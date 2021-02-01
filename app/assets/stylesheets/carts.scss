@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .text-items-cart{
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .btn-cart{
@@ -14,10 +14,79 @@
   font-size: 0.8rem;
 }
 
-.text-quantity-cart{
-  font-size: 0.8rem;
+.button-seguir-comprando{
+  margin-top: -4rem;
+  margin-left: 38rem;
+  margin-bottom: 1rem;
 }
 
-.button-seguir-comprando{
-  margin-top: 4rem;
+.table-cart{
+  margin: 0rem;
+}
+
+.text-content-table-cart{
+  font-size: 0.7rem;
+}
+
+//-----------------------------------------------------------------
+@media (min-width: 576px) { 
+
+  .table-cart{
+    margin: 0rem;
+  }
+
+  .titles-items-cart{
+    font-size: 0.9rem;
+  }
+
+  .text-content-table-cart{
+    font-size: 0.8rem;
+  }
+
+}
+
+//-----------------------------------------------------------------
+//Tablet 
+@media (min-width: 768px) {
+  .table-cart{
+    margin: 0rem 2rem;
+  }
+
+  .titles-items-cart{
+    font-size: 1rem;
+  }
+
+  .text-content-table-cart{
+    font-size: 1rem;
+  }
+}
+
+//-----------------------------------------------------------------
+//Laptop - LG 
+@media (min-width: 992px) {
+  .table-cart{
+    margin: 0rem 8rem;
+  }
+  .titles-items-cart{
+    font-size: 1rem;
+  }
+
+  .text-content-table-cart{
+    font-size: 1rem;
+  }
+}
+
+//-----------------------------------------------------------------
+// Extra-Large XL (Laptop en chrome)
+@media (min-width: 1200px) {
+  .table-cart{
+    margin: 0rem 12rem;
+  }
+  .titles-items-cart{
+    font-size: 1rem;
+  }
+
+  .text-content-table-cart{
+    font-size: 1rem;
+  }
 }

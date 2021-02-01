@@ -16,8 +16,8 @@ class OrdersTest < ApplicationSystemTestCase
 
     fill_in "Number", with: @order.number
     fill_in "State", with: @order.state
-    fill_in "Subtotal", with: @order.subtotal
     fill_in "Total", with: @order.total
+    fill_in "User", with: @order.user_id
     click_on "Create Order"
 
     assert_text "Order was successfully created"
@@ -30,8 +30,8 @@ class OrdersTest < ApplicationSystemTestCase
 
     fill_in "Number", with: @order.number
     fill_in "State", with: @order.state
-    fill_in "Subtotal", with: @order.subtotal
     fill_in "Total", with: @order.total
+    fill_in "User", with: @order.user_id
     click_on "Update Order"
 
     assert_text "Order was successfully updated"
