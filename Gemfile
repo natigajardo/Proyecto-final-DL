@@ -34,6 +34,8 @@ gem 'dotenv-rails'
 gem 'omniauth-google-oauth2'
 gem 'activerecord-session_store'
 gem 'omniauth', '~> 1.9'
+gem 'chartkick'
+gem 'groupdate'
 
 # Use ActiveStorage variant
 gem 'mini_magick', '~> 4.8'

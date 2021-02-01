@@ -11,7 +11,10 @@
     <ul class="nav nav-tabs navbar-dark text-center" id="myTab" role="tablist">
 
       <li class="nav-item" role="presentation">
-        <a class="nav-link active text-panel-admin" id="orders-tab" data-toggle="tab" href="#orders" role="tab" aria-controls="orders" aria-selected="false">Ordenes</a>
+        <a class="nav-link active text-panel-admin" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="false">Dashboard</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link text-panel-admin" id="orders-tab" data-toggle="tab" href="#orders" role="tab" aria-controls="orders" aria-selected="false">Ordenes</a>
       </li>
       <li class="nav-item" role="presentation">
         <a class="nav-link text-panel-admin" id="admin-tab" data-toggle="tab" href="#admin" role="tab" aria-controls="admin" aria-selected="false">Administradores</a>
@@ -27,7 +30,11 @@
     <!-- Content del admin -->
     <div class="tab-content page-content table-responsive" id="myTabContent">
 
-      <div class="tab-pane fade show active" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+      <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+        <%= render 'home/dashboard' %>
+      </div>
+
+      <div class="tab-pane fade" id="orders" role="tabpanel" aria-labelledby="orders-tab">
         <%= render 'home/orderstable' %>
       </div>
 

@@ -83,9 +83,11 @@ class OrdersController < ApplicationController
   def destroy
     @order.destroy
     respond_to do |format|
-      format.html { redirect_to root_path, notice: 'Order was successfully destroyed.' }
+      format.html { redirect_to homeadmin_path, notice: 'Order was successfully destroyed.' }
       format.json { head :no_content }
+      format.js 
     end
+    @orders = Order.all 
   end
 
   private

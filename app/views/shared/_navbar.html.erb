@@ -67,7 +67,9 @@
 
               <% if current_user.role == 'user' %>
                 <div class="dropdown-menu dropdown-menu-right dropdown-default text-dropdown" aria-labelledby="navbarDropdownMenuLink-333">
+
                     <%= link_to('Editar mis datos', edit_user_registration_path(@user), class: "dropdown-item  text-dropdown" ) %>
+
                     <%= link_to('Mis compras', paneluser_path, method: :get, class: "dropdown-item text-dropdown")%>
                     <div class="dropdown-divider"></div>
                     <%= link_to('Log out', destroy_user_session_path, method: :delete, class: "dropdown-item text-dropdown") %>

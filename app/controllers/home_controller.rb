@@ -7,6 +7,8 @@ class HomeController < ApplicationController
     @users = User.where(role: 'admin')
     @users1 = User.where(role: 'user')
     @orders = Order.all
+    @users_day = User.where(role: 'user').group_by_day(:created_at).count
+    @orders_state = Order.all.group(:state).count
   end
 
   def paneluser
