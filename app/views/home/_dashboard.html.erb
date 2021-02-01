@@ -1,4 +1,13 @@
-<div>
-  <%= pie_chart @users_day, title: "Usuarios registrados por día" %>
-  <%= pie_chart @orders_state, title: "Ordenes por estado" %>
+<div class="container my-3">
+  <div class="row">
+  
+  <div class="col-12 col-md-6 my-2"><%= pie_chart @users_day, title: "Usuarios registrados por día", width: "380px", height: "300px" %></div>
+
+  <div class="col-12 col-md-6 my-2"><%= pie_chart @orders_state, title: "Ordenes por estado", width: "350px", height: "300px" %></div>
+
+  <div class="col-12 col-md-6 my-2"><%= pie_chart @orders_pendientes_by_date, title: "Ordenes pendientes por día", width: "350px", height: "300px" %></div>
+
+  <div class="col-12 col-md-6 my-2"><%= pie_chart @orders_accept_by_date, title: "Ordenes aceptadas por día", width: "350px", height: "300px" %></div>
+
+  </div>
 </div>

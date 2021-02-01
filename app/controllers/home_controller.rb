@@ -9,6 +9,8 @@ class HomeController < ApplicationController
     @orders = Order.all
     @users_day = User.where(role: 'user').group_by_day(:created_at).count
     @orders_state = Order.all.group(:state).count
+    @orders_pendientes_by_date = Order.where(state: 'Pendiente').group_by_day(:created_at).count
+    @orders_accept_by_date = Order.where(state: 'Aceptada').group_by_day(:created_at).count
   end
 
   def paneluser
