@@ -79,20 +79,108 @@ body * {
 .titulo-somos{
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .text-somos{
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
 }
+
+//SECCION PRODUCTOS EJEMPLOS
+.background-flower{
+  background-color: #F8F5EF;
+  
+}
+
+.size-image-wall{
+  width: 100%;
+}
+
+.text-photo{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
+
+ //footer
+
+ .background-footer{
+  background-color: #616670;
+  height: 150px;
+}
+
+.text-escribanos{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.text-email{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.text-bajada{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+//----------------------------------------------------------------------
 
 @media (min-width: 576px) { 
 
   .btn-cart{
     width: 6em;
     margin-right: 2.7rem;
+  }
+
+  //SECCION PRODUCTOS EJEMPLOS
+  .background-flower{
+    background-color: #F8F5EF;
+   
+  }
+
+  .size-image-wall{
+    width: 100%;
+  }
+
+  .text-photo{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-top: 4rem;
+  }
+
+   //footer
+
+   .background-footer{
+    background-color: #616670;
+    height: 150px;
+  }
+
+  .text-escribanos{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+
+  .text-email{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .text-bajada{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
   }
 
 }
@@ -146,6 +234,53 @@ body * {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     font-size: 0.8rem;
+  }
+
+  //SECCION PRODUCTOS EJEMPLOS
+  .background-flower{
+    background-color: #F8F5EF;
+    
+  }
+
+  .size-image-wall{
+    width: 100%;
+  }
+
+  .text-photo{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-top: 4rem;
+  }
+
+  .foto3-size{
+    margin: 1.2rem 0rem;
+  }
+
+   //footer
+
+   .background-footer{
+    background-color: #616670;
+    height: 150px;
+  }
+
+  .text-escribanos{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+
+  .text-email{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .text-bajada{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
   }
 
 }
@@ -205,6 +340,45 @@ body * {
     font-size: 1rem;
   }
 
+  //SECCION PRODUCTOS EJEMPLOS
+  .background-flower{
+    background-color: #F8F5EF;
+  }
+
+  .size-image-wall{
+    width: 100%;
+  }
+
+  .foto3-size{
+    margin: 2rem 0rem;
+  }
+
+   //footer
+
+   .background-footer{
+    background-color: #616670;
+    height: 150px;
+  }
+
+  .text-escribanos{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+
+  .text-email{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .text-bajada{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+
 }  
 
 //--------------------------------------------------------------------------
@@ -255,6 +429,45 @@ body * {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     font-size: 0.8rem;
+  }
+
+  //SECCION PRODUCTOS EJEMPLOS
+  .background-flower{
+    background-color:#F8F5EF;
+  }
+
+  .size-image-wall{
+    width: 100%;
+  }
+
+  .foto3-size{
+    margin: 2rem 0rem;
+  }
+
+  //footer
+
+  .background-footer{
+    background-color: #616670;
+    height: 150px;
+  }
+
+  .text-escribanos{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+
+  .text-email{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .text-bajada{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
   }
 
 }

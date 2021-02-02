@@ -44,8 +44,8 @@
 
       <% if order.state == 'Pendiente' %>
         <td><%= link_to 'Cancelar orden', cancel_order_path(order), remote: true, data: { confirm: '¿Estás seguro de eliminar tu orden?' }, class: "btn btn-warning btn-cancel-order" %></td>
-      <% else%>
-        <td> Esta orden fue cancelada </td>  
+      <% else %>
+        <td class="text-center">-</td> 
       <% end %> 
     
     </tr>
