@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'home/admin', to: 'home#admin', as: 'homeadmin'
   get 'home/paneluser', to: 'home#paneluser', as: 'paneluser'
 
-  #MAILGUN
+  #Sendgrid
   #get '/send_email', to: 'home#send_email', as: 'send_email'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

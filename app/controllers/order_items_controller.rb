@@ -10,6 +10,16 @@ class OrderItemsController < ApplicationController
         format.html { redirect_to paneluser_path, notice: 'Tu orden está siendo procesada!' }
       end 
     end
+
+    #require 'sendgrid-ruby'
+    #from = Email.new(email: 'natty.gajardo.s@gmail.com')
+    #to = Email.new(email: 'natig.artwork@gmail.com')
+    #subjet = "Email de prueba "
+    #content = Content.new(type: "text/plain", value: "Hola, soy un email de prueba")
+    #mail_info = Mail.new(from, subjet, to, content)
+    
+    #s_grid = SendGrid::API.new(api_key: ENV['API_KEY_SENDGRID'])
+    #response = s_grid.client.email._('send').post(request_body: mail_info.to_json)
   end
 
   # GET /order_items

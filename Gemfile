@@ -36,7 +36,7 @@ gem 'activerecord-session_store'
 gem 'omniauth', '~> 1.9'
 gem 'chartkick'
 gem 'groupdate'
-gem 'mailgun-ruby', '~>1.1.6'
+#gem 'sendgrid-ruby'
 
 # Use ActiveStorage variant
 gem 'mini_magick', '~> 4.8'

@@ -20,22 +20,4 @@ class HomeController < ApplicationController
     @orders = current_user.orders.all
   end 
 
-  #def send_email
-  #  require 'mailgun-ruby'
-#
-  #    # First, instantiate the Mailgun Client with your API key
-  #    mg_client = Mailgun::Client.new ENV['API_KEY_MAILGUN']
-#
-  #    # Define your message parameters
-  #    message_params =  { from: 'natty.gajardo.s@gmail.com',
-  #                        to:   'natig.artwork@gmail.com',
-  #                        subject: 'Prueba mailgun',
-  #                        text:    'Esta es una prueba de correo ! '
-  #                      }
-#
-  #    # Send your message through the client
-  #    mg_client.send_message 'natty.gajardo.s@gmail.com', message_params
-  #end
-
-
 end
