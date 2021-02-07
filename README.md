@@ -1,6 +1,6 @@
 # README
 
-Trello : https://trello.com/b/zDsl8Npk/proyecto-final-dl // Heroku : https://obscure-coast-86604.herokuapp.com/
+Trello : https://trello.com/b/zDsl8Npk/proyecto-final-dl // Heroku :
 
 Ruby: 2.7.2.
 
