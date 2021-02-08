@@ -1,6 +1,8 @@
 # README
 
-Trello : https://trello.com/b/zDsl8Npk/proyecto-final-dl // Heroku :
+Trello : https://trello.com/b/zDsl8Npk/proyecto-final-dl 
+
+Heroku : https://appnatagaja.herokuapp.com/
 
 Ruby: 2.7.2.
 
