@@ -7,9 +7,11 @@ class HomeController < ApplicationController
 
   def admin
     @products = Product.all.order("created_at desc")
-    @users = User.where(role: 'admin')
-    @users1 = User.where(role: 'user')
-    @orders = Order.all
+    @users = User.where(role: 'admin').order("created_at desc")
+    @users1 = User.where(role: 'user').order("created_at desc")
+    @orders = Order.all.order("created_at desc")
+    
+    #Gráficos
     @users_day = User.where(role: 'user').group_by_day(:created_at).count
     @orders_state = Order.all.group(:state).count
     @orders_pendientes_by_date = Order.where(state: 'Pendiente').group_by_day(:created_at).count
