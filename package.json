@@ -2,6 +2,9 @@
   "name": "proyectofinal",
   "private": true,
   "dependencies": {
-    "highcharts": "^8.2.2"
+    "bootstrap": "^4.6.0",
+    "highcharts": "^8.2.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
   }
 }
